@@ -13,7 +13,7 @@ const showData=(values)=>{
         const {category,author,title,description,comment_count,posted_time,image}=value;
         const div=document.createElement("div")
         div.innerHTML=`
-        
+         
          <div class="p-5 mt-8 rounded-md bg-[#e0ac62] shadow-slate-300  h-80">
      <div class="flex gap-3">
      <div>
@@ -36,14 +36,13 @@ const showData=(values)=>{
         <div>
             <p>${comment_count}</p>
         </div>
-        <div>
+        <div >
             <p>${posted_time}</p>
-        </div>
-      
-         <button onclick='add(${JSON.stringify(value)})' class="font-semibold px-4 py-1 ml-20 bg-indigo-600 rounded-md mt-5" >select</button>
-   
-      
-
+            <div>
+               <button onclick='add(${JSON.stringify(value)})' class="font-semibold  px-3 py-2   bg-indigo-600 rounded-md " >select</button>
+            </div>
+        </div>    
+       
         `
        maindiv.appendChild(div)
     }
@@ -58,7 +57,7 @@ const add=(btn)=>{
  const ol =document.getElementById("add")
  const li=document.createElement("li")
   li.innerHTML=`
-  <div class="card bg-base-100 w-96 bg-[#e0ac62] ml-4 shadow-xl h-28 mt-4 ">
+  <div class="card bg-base-100  bg-[#e0ac62] ml-4 shadow-xl h-28 mt-4 ">
   <div class="flex justify-around items-center mt-4 p-3 text-sm" >
       <div>
          <h2 class="card-title">${title}</h2>
@@ -99,16 +98,16 @@ const blogs=(some)=>{
     console.log(value)
     const li=document.createElement("li")
     li.innerHTML=`
-    <div class="card card-compact bg-base-100 w-96 shadow-xl">
+    <div class="card card-compact bg-base-100 mt-10  gap-10  shadow-xl">
   <figure>
     <img
-      src="${cover_image}"
+      src="${cover_image}" class="h-50 pt-3"
       alt="" />
   </figure>
   <div class="card-body">
     <h2 class="text-lg font-semibold text-blackcode m-0.5">${title}</h2>
     <p>${description}</p>
-    <div class="flex  justify-between">
+    <div class="flex  justify-between gap-5">
        <div>
           <img src="${profile_image}" alt="">
        </div>
@@ -127,4 +126,7 @@ const blogs=(some)=>{
   }
 }
 blog()
+
+
+
 
