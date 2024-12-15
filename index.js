@@ -1,3 +1,9 @@
+
+
+
+
+
+
 const loadData=()=>{
     fetch('https://f24-1-mid-1.vercel.app/content')
     .then(respons=>respons.json())
@@ -9,15 +15,17 @@ const showData=(values)=>{
     
     const maindiv = document.getElementById("contant")
     for(const value of values ){
-        // console.log(value)
-        const {category,author,title,description,comment_count,posted_time,image}=value;
+        console.log(value)
+        const {category,author,title,description,comment_count,posted_time,isActive ,image}=value;
+         
         const div=document.createElement("div")
         div.innerHTML=`
-         
+        
          <div class="p-5 mt-8 rounded-md bg-[#e0ac62] shadow-slate-300  h-80">
+        
      <div class="flex gap-3">
      <div>
-        <img src="${image}" alt="" class="w-16 h-16">
+        <img src="${image}" alt="" class="  w-16 h-16">
      </div>
      <div class="font-semibold text-lg gap-2 ">
         <div>
@@ -41,12 +49,32 @@ const showData=(values)=>{
             <div>
                <button onclick='add(${JSON.stringify(value)})' class="font-semibold  px-3 py-2   bg-indigo-600 rounded-md " >select</button>
             </div>
-        </div>    
+        </div>
+        
+      
+             
        
         `
        maindiv.appendChild(div)
     }
 }
+
+
+{/* <div id="dot" class=" w-3 h-3 rounded-full bg-black "></div> */}
+// const isActive=()=>{
+//     fetch('https://f24-1-mid-1.vercel.app/content')
+//     .then(res=>res.json())
+//     .than(data=>Active(data))
+// }
+
+// const Active=(para)=> {
+  
+
+// }
+
+
+
+// isActive()
  
 
 
@@ -94,26 +122,28 @@ const blog=()=>{
 const blogs=(some)=>{
  const card=document.getElementById("blog")
   for(const value of some){
+    // console.log(value)
     const {author,cover_image,description,title,_id,profile_image}=value;
-    console.log(value)
+    // console.log(value)
     const li=document.createElement("li")
     li.innerHTML=`
     <div class="card card-compact bg-base-100 mt-10  gap-10  shadow-xl">
   <figure>
     <img
-      src="${cover_image}" class="h-50 pt-3"
+      src="${cover_image}" class="h-40 pt-3"
       alt="" />
   </figure>
   <div class="card-body">
+  <p>${author.posted_date}</p>
     <h2 class="text-lg font-semibold text-blackcode m-0.5">${title}</h2>
     <p>${description}</p>
-    <div class="flex  justify-between gap-5">
+    <div class="flex  gap-5">
        <div>
-          <img src="${profile_image}" alt="">
+          <img src="${profile_image}" class="w-16 h-16" alt="">
        </div>
       <div>
-         <p>${author.name}<p>
-         <p>${description}
+         <p>${author.name}</p>
+         <p>${author.designation}</p>
           
       </div>
     </div>

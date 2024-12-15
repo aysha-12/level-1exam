@@ -18,26 +18,30 @@
             <img class="h-14 w-16 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGvsMowPgtfLRWRZGvJT6Yjo5udXJ7BtVdVg&s" alt="">
             
         </div>
-        <div  class="text-[#e0ac62] flex   ml-36">
+        <div class="flex">
+            <div  class="text-[#e0ac62] flex   ml-36">
            
-            <div class="w-11 h-11 text-2xl">
-                <i class="fa-solid fa-house " title="home"></i>
+                <div class="w-11 h-11 text-2xl">
+                    <i class="fa-solid fa-house " title="home"></i>
+                </div>
+                <div class="w-11 h-11 text-2xl">
+                    <i class="fa-solid fa-pen " title="pen"></i>
+                </div>
+                <div class="w-11 h-11 text-2xl">
+                    <i class="fa-solid fa-flag " title="flag" ></i>
+                </div>
+                <div class="w-11 h-11 text-2xl">
+                    <i class="fa-solid fa-cart-shopping " title="cart-shopping"></i>
+                </div>         
+             
+                
+               
+                
             </div>
-            <div class="w-11 h-11 text-2xl">
-                <i class="fa-solid fa-pen " title="pen"></i>
-            </div>
-            <div class="w-11 h-11 text-2xl">
-                <i class="fa-solid fa-flag " title="flag" ></i>
-            </div>
-            <div class="w-11 h-11 text-2xl">
-                <i class="fa-solid fa-cart-shopping " title="cart-shopping"></i>
-            </div>         
-         
-            
-           
-            
+             <div>
+                <button id="btn" class="text-lg font-bold ml-30 px-3 py-1 bg-[#f3bf77]  rounded-md">sign in</button>
+             </div>
         </div>
-        <button id="btn" class="text-lg font-bold ml-30 px-3 py-1 bg-[#f3bf77]  rounded-md">sign in</button>
        
         
     </div>
@@ -59,9 +63,9 @@
                
                   <label for="" class="md:flex md:pb-4  sm:pb-8 sm:flex sm:justify-center md:mt-10 md:mb-4  ">
                      <div class="ml-7">
-                         <input class="h-10 hover:border-none  rounded-l-3xl" type="text" placeholder="    Enter somthing">
+                         <input class="h-10 hover:border-none  sm:rounded-l-3xl" type="text" placeholder="    Enter somthing">
                      </div>
-                     <button class=" bg-slate-400 font-semibold h-10 sm:relative  rounded-r-3xl hover:text-blue-800 w-20">Search </button>
+                     <button class=" bg-slate-400 font-semibold h-10 sm:relative  sm:rounded-r-3xl hover:text-blue-800 w-20">Search </button>
                  </label>
                </div>
             
@@ -75,12 +79,12 @@
      <section  class="mt-20 ">
         <p class="text-3xl font-bold text-center text-green-900 ">Contant</p>
         <p class=" text-3xl font-bold text-green-900 text-center">"Lorem ipsum dolor"</p>
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 lg:col-span-2 md:col-span-2 sm:grid sm:grid-cols-2 gap-10 mt-10 container m-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 lg:col-span-2 md:col-span-2 sm:grid sm:grid-cols-2 gap-5 mt-10 ">
             <div id="contant" class="md:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 sm:col-span-2 md:col-span-2 gap-10 ">
 
             </div>
         
-           
+            
              <div id="show" class="  bg-slate-200 rounded-lg">
 
                   <div class="flex justify-between p-3  mt-5">
@@ -134,11 +138,11 @@
          </div>
           <!-- blogs-end -->
          <!-- footer -->
-          <div class="mt-28 w-full sm:grid sm:grid-cols-2 mb-10 md:pl-20 lg:pl-5  md:md:flex md:justify-around p-8 bg-slate-300">
+          <div class="mt-28 w-full sm:grid sm:grid-cols-2  md:pl-20 lg:pl-5  md:md:flex md:justify-around p-8 bg-slate-300">
             <div>
                 <p class="text-[#eba038] font-bold text-3xl mt-10"> ❮ cdnjs ❯</p><br>
                 <div class="flex ">
-                    <p>2024 cdnjs. |</p>
+                    <p>@2024 cdnjs. |</p>
                     <div class="text-black text-xl ml-3">
                         <i class="fa-brands fa-twitter"></i>
                     </div>
@@ -186,32 +190,3 @@
 
 
 
-<!-- 
-<div class=" bg-[#e0ac62] p-2 rounded-lg shadow-xl">
-    
-    <div class="grid grid-cols-2 ">
-      <div>
-      <img
-      src="${image}"
-      alt="" class="w-16 mt-3  h-16/>
-      
-    </div> 
-     <div>
-       <h2 class="card-title text-lg font-semibold">${author.name}</h2>
-     <h2 class="card-title">${category}</h2>
-    
-    </div>   
-</div> 
-   <div  class=" mb-5 ">
-  
-    <p>${title}</p>
-    <p>${description}</p>
-    <p>${comment_count}</p>
-     <p>${posted_time}</p>
-  </div>
-
- <div class="flex justify-end mb-20">
-   <button onclick='add(${JSON.stringify(value)})' class="btn btn-primary">Buy Now</button>
- </div>
-
-</div> -->
